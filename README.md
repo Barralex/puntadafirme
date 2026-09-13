@@ -2,7 +2,7 @@
 
 **Venezuelan tailoring · Solymar, Ciudad de la Costa, Uruguay**
 
-Landing page for a seamstress's atelier: alterations, uniforms, children's clothing, and the party dress that needs one last fix. Every enquiry ends on WhatsApp, so the whole page is built to get there in a single tap.
+Landing page for a seamstress's atelier: alterations, uniforms, children's clothing, and the party dress that needs one last fix. Cloth, thread, and patience.
 
 ***
 
