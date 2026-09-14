@@ -17,7 +17,7 @@ index.html      the page
 assets/         the two sewing machines
 ```
 
-Social preview tags point at `https://barralex.github.io/sewing-atelier-landing/`. Change that base if the atelier moves to a domain of its own.
+Published at `https://puntadafirme.com/`. The social preview tags and `CNAME` both carry that domain; change them together if it ever moves.
 
 To update, edit `index.html` and:
 
