@@ -22,7 +22,9 @@ Published at `https://puntadafirme.com/`. The social preview tags and `CNAME` bo
 To update, edit `index.html` and:
 
 ```bash
-git add . && git commit -m "Update" && git push
+git add . && git commit -m "fix(landing): short description" && git push
 ```
+
+Commits follow `type(scope): short message`, e.g. `feat(landing): add reviews`, `fix(deploy): ...`, `docs(readme): ...`.
 
 <p align="center"><sub>co-assisted by <b>Claude Opus 5</b></sub></p>
