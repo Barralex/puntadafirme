@@ -1,4 +1,4 @@
-# Sewing Atelier
+# Puntada Firme
 
 **Venezuelan tailoring · Solymar, Ciudad de la Costa, Uruguay**
 
@@ -10,12 +10,16 @@ The roots of this workshop run three countries deep, and the vision arrived comp
 
 ***
 
-A single static page: no build step, no dependencies, nothing to install. HTML, two typefaces, and [Leaflet](https://leafletjs.com) for the coverage map over Ciudad de la Costa. The dress form, the icons, and the 24-48 h seal are inline SVG, so they stay sharp at any size and cost no extra request.
+A single static page: no build step, no dependencies, nothing to install. HTML, three typefaces, and [Leaflet](https://leafletjs.com) for the coverage map over Ciudad de la Costa. The icons, the flag, and the 24-48 h seal are inline SVG, so they stay sharp at any size and cost no extra request.
 
 ```
-index.html      the page
-assets/         the two sewing machines
+index.html                     the page
+assets/                        images
+.github/scripts/check.py       checks the page before it goes out
+.github/workflows/deploy.yml   publishes to GitHub Pages
 ```
+
+The stock photos (`hero-*.webp`, `maquina-actual.webp`) are CC0 from [rawpixel](https://www.rawpixel.com): free for commercial use, no attribution required.
 
 Published at `https://puntadafirme.com/`. The social preview tags and `CNAME` both carry that domain; change them together if it ever moves.
 
@@ -24,6 +28,8 @@ To update, edit `index.html` and:
 ```bash
 git add . && git commit -m "fix(landing): short description" && git push
 ```
+
+Every push to `main` runs `check.py` first: broken markup, a missing file, or a bad social preview tag stops the deploy and the live site stays as it was.
 
 Commits follow `type(scope): short message`, e.g. `feat(landing): add reviews`, `fix(deploy): ...`, `docs(readme): ...`.
 
