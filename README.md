@@ -19,7 +19,7 @@ assets/                        images
 .github/workflows/deploy.yml   publishes to GitHub Pages
 ```
 
-The hero photos (`hero-*.webp`) are CC0 from [rawpixel](https://www.rawpixel.com): free for commercial use, no attribution required. The current machine (`maquina-actual.jpg`) is by [storebukkebruse](https://www.flickr.com/photos/8536261@N07/13937583028) under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/), credited in the footer.
+The hero photos (`hero-*.webp`) are CC0 from [rawpixel](https://www.rawpixel.com): free for commercial use, no attribution required. The current machine (`machine-heavy-duty.jpg`) is by [storebukkebruse](https://www.flickr.com/photos/8536261@N07/13937583028) under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/), credited in the footer.
 
 Published at `https://puntadafirme.com/`. The social preview tags and `CNAME` both carry that domain; change them together if it ever moves.
 

@@ -220,7 +220,7 @@
     box-shadow:inset 0 0 130px rgba(0,0,0,.3);
   }
   .gen::before{content:"";position:absolute;inset:0;background:radial-gradient(130% 90% at 50% -18%,rgba(230,238,205,.12),transparent 60%);pointer-events:none;}
-  .gen .wrap{position:relative;z-index:1;max-width:1080px;}
+  .gen .wrap{position:relative;z-index:1;}
   .gen-intro{font-family:"EB Garamond",serif;font-weight:500;font-size:clamp(1.75rem,3.3vw,2.4rem);line-height:1.34;color:var(--cream);max-width:26ch;}
   .gen-intro em{font-style:normal;}
   .gen-intro .ve,.gen-intro .uy,.gen-slogan em{
@@ -236,12 +236,12 @@
   .gen-head{margin-top:56px;}
   .gen-head .label{color:var(--mint);}
   .gen-head h2{font-family:"EB Garamond",serif;font-weight:600;color:var(--cream);font-size:clamp(2rem,4.4vw,2.8rem);margin-top:14px;line-height:1.1;}
-  .gen-track{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:46px;}
+  .gen-track{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:46px;}
   .gen-photo{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;border:1px solid rgba(230,238,205,.3);background:var(--green-deep);}
   .gen-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.26) saturate(.88) contrast(1.05) brightness(1.04);}
   .gen-photo::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 50px rgba(0,0,0,.45);pointer-events:none;}
-  .gen-caption{display:flex;align-items:center;gap:20px;margin-top:22px;}
-  .gen-no{flex:none;width:4.2rem;padding-right:20px;border-right:1px solid rgba(230,238,205,.28);font-family:"Cormorant Garamond",serif;font-weight:500;font-size:2.9rem;line-height:1;text-align:center;color:var(--mint);}
+  .gen-caption{display:flex;align-items:stretch;gap:20px;margin-top:22px;}
+  .gen-no{flex:none;width:4.8rem;padding-right:20px;border-right:1px solid rgba(230,238,205,.28);font-family:"Cormorant Garamond",serif;font-weight:500;font-size:2.9rem;line-height:1;text-align:center;color:var(--mint);}
   .gen-card h3{font-family:"EB Garamond",serif;font-weight:600;font-size:1.6rem;color:var(--cream);margin:0;line-height:1.12;}
   .gen-card p{font-family:"EB Garamond",serif;font-style:italic;font-weight:400;font-size:1.14rem;color:rgba(246,244,237,.72);margin-top:4px;}
   .gen-slogan{text-align:center;font-family:"EB Garamond",serif;font-weight:600;font-size:clamp(2rem,4.4vw,2.8rem);line-height:1.18;color:var(--cream);margin-top:64px;}
@@ -321,9 +321,9 @@
     </div>
 
     <div class="hero-media rise">
-      <img class="is-active" src="assets/hero-manos.webp" alt="Manos cosiendo una prenda en la máquina" width="1024" height="574" style="object-position:20% 50%">
-      <img src="assets/hero-hilos.webp" alt="Carreteles de hilo, centímetro y tijera sobre la mesa de trabajo" width="1024" height="576">
-      <img src="assets/hero-prensatelas.webp" alt="Prensatelas de la máquina cosiendo una tela" width="1024" height="733">
+      <img class="is-active" src="assets/hero-hands.webp" alt="Manos cosiendo una prenda en la máquina" width="1024" height="574" style="object-position:20% 50%">
+      <img src="assets/hero-threads.webp" alt="Carreteles de hilo, centímetro y tijera sobre la mesa de trabajo" width="1024" height="576">
+      <img src="assets/hero-presser-foot.webp" alt="Prensatelas de la máquina cosiendo una tela" width="1024" height="733">
     </div>
   </div>
 </section>
@@ -336,23 +336,33 @@
     </p>
     <div class="gen-head">
       <span class="label">DE GENERACIÓN EN GENERACIÓN</span>
-      <h2>Dos máquinas, la misma mano.</h2>
+      <h2>Tres máquinas, la misma mano.</h2>
     </div>
     <div class="gen-track">
       <article class="gen-card">
-        <div class="gen-photo"><img src="assets/maquina-pedal.png" alt="Máquina de coser Singer a pedal, antigua"></div>
+        <div class="gen-photo"><img src="assets/machine-treadle.png" alt="Máquina de coser Singer a pedal, antigua"></div>
         <div class="gen-caption">
           <span class="gen-no" aria-hidden="true">I</span>
           <div>
             <h3>La de pedal</h3>
-            <p>En España, donde empezó todo.</p>
+            <p>En Carúpano, Venezuela, donde empezó todo.</p>
           </div>
         </div>
       </article>
       <article class="gen-card">
-        <div class="gen-photo"><img src="assets/maquina-actual.jpg" alt="Máquina de coser Singer Heavy Duty sobre una mesa de madera" width="1024" height="768" loading="lazy"></div>
+        <div class="gen-photo"><img src="assets/machine-875.jpg" alt="Máquina de coser Singer 875 crema y roja, cosiendo una tela" width="960" height="960" loading="lazy" style="object-position:50% 68%"></div>
         <div class="gen-caption">
           <span class="gen-no" aria-hidden="true">II</span>
+          <div>
+            <h3>La de siempre</h3>
+            <p>Más de 35 años de puntadas.</p>
+          </div>
+        </div>
+      </article>
+      <article class="gen-card">
+        <div class="gen-photo"><img src="assets/machine-heavy-duty.jpg" alt="Máquina de coser Singer Heavy Duty sobre una mesa de madera" width="1024" height="768" loading="lazy"></div>
+        <div class="gen-caption">
+          <span class="gen-no" aria-hidden="true">III</span>
           <div>
             <h3>La de ahora</h3>
             <p>En la Costa, la que hoy te cose.</p>
