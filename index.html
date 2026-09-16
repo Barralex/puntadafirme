@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Puntada Firme · Costura personalizada en Solymar, Ciudad de la Costa</title>
-<meta name="description" content="Costura personalizada en Solymar, Ciudad de la Costa. Arreglos, ajustes y ropa de todos los días, con décadas de oficio. Nos vemos en la entrada del barrio.">
+<meta name="description" content="Modista y costurera en Solymar, Ciudad de la Costa. Ruedos, cierres, túnicas escolares y arreglos de ropa, con décadas de oficio.">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_UY">
@@ -21,6 +21,49 @@
 <meta name="twitter:description" content="Arreglos, ajustes y ropa de todos los días, con décadas de oficio. Nos vemos en la entrada, en Solymar.">
 <meta name="twitter:image" content="https://puntadafirme.com/assets/brand/seal-badge.png">
 <meta name="theme-color" content="#08241A">
+
+<link rel="canonical" href="https://puntadafirme.com/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Puntada Firme",
+  "description": "Costura personalizada en Solymar, Ciudad de la Costa: arreglos, ajustes, uniformes, ropa de bebé y de fiesta.",
+  "url": "https://puntadafirme.com/",
+  "image": "https://puntadafirme.com/assets/brand/seal-badge.png",
+  "logo": "https://puntadafirme.com/assets/brand/seal-badge.png",
+  "telephone": "+59899485236",
+  "currenciesAccepted": "UYU",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Solymar",
+    "addressRegion": "Canelones",
+    "addressCountry": "UY"
+  },
+  "areaServed": [
+    {"@type": "Place", "name": "Solymar"},
+    {"@type": "Place", "name": "Lomas de Solymar"},
+    {"@type": "Place", "name": "Lagomar"},
+    {"@type": "Place", "name": "El Pinar"},
+    {"@type": "Place", "name": "El Bosque"},
+    {"@type": "Place", "name": "Ciudad de la Costa"}
+  ],
+  "knowsLanguage": "es",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de costura",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arreglos de pantalones y jeans"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arreglos de camisas y abrigos"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arreglos de polleras y vestidos"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arreglos de uniformes"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arreglos de ropa de bebé"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arreglos de ropa de fiesta"}}
+    ]
+  }
+}
+</script>
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
@@ -58,13 +101,12 @@
     font-family:"Inter",system-ui,sans-serif;
     font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;margin:0;}
+  h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;margin:0;}
   p{margin:0;}
   a{color:inherit;}
   .wrap{width:100%;max-width:1208px;margin:0 auto;padding:0 28px;}
   .label{display:inline-flex;align-items:center;gap:13px;font-size:.82rem;letter-spacing:.18em;color:var(--leather-deep);font-weight:600;}
   .label::before{content:"";width:30px;height:1.5px;background:currentColor;flex:none;opacity:.85;}
-  .rule{height:1px;background:var(--line);border:0;margin:0;}
 
   /* Botones */
   .btn{display:inline-flex;align-items:center;gap:10px;font-family:"Inter",sans-serif;font-size:.95rem;font-weight:500;
@@ -107,10 +149,6 @@
   .hero-dots button[aria-current="true"]{width:22px;background:var(--green);}
   .hero-dots button:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
 
-  /* Manifiesto */
-  .manifesto{padding:66px 0;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .manifesto p{font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,3.4vw,2.4rem);line-height:1.28;max-width:24ch;margin:0 auto;color:var(--ink);}
-  .manifesto p em{font-style:italic;background:linear-gradient(100deg,#CFA12E 0%,#C0392B 34%,#2A4A9C 68%,#4E86C6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 
   /* Secciones */
   section{padding:82px 0;}
@@ -121,13 +159,7 @@
 
   /* Servicios: carta del taller */
   #servicios{background:var(--cream);}
-  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px;}
-  .svc-card{border:1px solid var(--line);border-radius:12px;padding:30px 30px 28px;background:#fff;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;}
-  .svc-card:hover{border-color:var(--leather);box-shadow:0 20px 36px -28px rgba(120,80,40,.45);transform:translateY(-3px);}
   .svc-ic{width:44px;height:44px;color:var(--leather);margin-bottom:18px;display:block;}
-  .svc-card h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.55rem;color:var(--ink);line-height:1.1;}
-  .svc-card p{color:var(--muted);font-size:1rem;margin-top:8px;}
-  .svc-tags{margin-top:16px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leather-deep);}
   .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;}
   .pack{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px 26px 28px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 20px 38px -30px rgba(120,80,40,.55);}
   .pack img{width:136px;height:136px;border-radius:50%;object-fit:cover;filter:sepia(.2) saturate(.95) brightness(1.03);box-shadow:0 14px 26px -14px rgba(120,80,40,.75);}
@@ -151,18 +183,12 @@
   .rate-list li>span:first-child{color:var(--ink);font-size:1rem;}
   .rate-dots{flex:1;min-width:20px;align-self:center;height:0;border-bottom:1px dotted rgba(172,115,63,.4);}
   .rate-price{flex:none;font-family:"EB Garamond",serif;font-weight:600;font-size:1.2rem;color:var(--leather);white-space:nowrap;}
-  .rate-note{margin-top:26px;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.22rem;color:var(--muted);}
+  .rate-promise{margin-top:34px;text-align:center;}
+  .rate-promise p{font-family:"Cormorant Garamond",serif;font-size:clamp(1.5rem,3.1vw,2.1rem);line-height:1.24;color:var(--green);}
+  .rate-promise em{color:var(--leather);font-weight:600;}
+  .rate-promise .rate-note{margin-top:12px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.08rem;line-height:1.4;color:var(--muted);}
   .rate-cta{margin-top:26px;text-align:center;}
 
-  /* El oficio */
-  .craft{background:var(--cream);}
-  .craft-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-  .craft h2{font-size:clamp(2.1rem,4.2vw,3rem);}
-  .craft .big{font-family:"Cormorant Garamond",serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.35;color:var(--ink);}
-  .craft .big em{font-style:italic;background:linear-gradient(100deg,#CFA12E 0%,#C0392B 34%,#2A4A9C 68%,#4E86C6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .craft ul{list-style:none;padding:0;margin:26px 0 0;}
-  .craft li{padding:14px 0;border-top:1px solid var(--line);color:var(--muted);display:flex;gap:14px;}
-  .craft li::before{content:"";width:8px;height:8px;margin-top:9px;flex:none;background:var(--leather-deep);border-radius:50%;}
 
   /* Zona / mapa */
   .zona{background:var(--bg);}
@@ -175,6 +201,7 @@
   .zona-deliver{display:flex;align-items:center;gap:18px;margin-top:28px;padding:20px 24px;border-radius:16px;background:var(--linen);box-shadow:0 16px 30px -26px rgba(120,80,40,.6);}
   .zona-deliver svg{flex:none;width:52px;height:52px;color:var(--leather);}
   .zona-deliver p{font-family:"EB Garamond",serif;font-size:1.16rem;line-height:1.35;color:var(--green);}
+  .zona-stamp{flex:none;width:86px;height:86px;margin-left:auto;transform:rotate(-8deg);opacity:.85;}
   .zona-deliver strong{font-weight:600;}
   .map{position:relative;isolation:isolate;width:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg);overflow:hidden;box-shadow:0 20px 40px -30px rgba(120,80,40,.4);}
   #cobertura-map{width:100%;height:520px;background:var(--bg);}
@@ -185,15 +212,7 @@
   .map-card-eyebrow{display:block;font-size:.66rem;letter-spacing:.18em;color:var(--leather-deep);font-weight:600;}
   .map-card-title{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.5rem;color:var(--ink);margin-top:6px;line-height:1.05;}
   .map-card-line{color:var(--muted);font-size:.9rem;margin-top:8px;line-height:1.42;}
-  .map-card-cta{display:inline-flex;align-items:center;gap:8px;margin-top:15px;background:var(--green);color:#fff;font-size:.85rem;font-weight:500;padding:9px 16px;border-radius:999px;text-decoration:none;transition:background .2s ease;}
-  .map-card-cta::after{content:"→";}
-  .map-card-cta:hover{background:var(--green-light);}
 
-  /* Cómo funciona */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:44px;}
-  .step .n{font-family:"Cormorant Garamond",serif;font-size:3.4rem;color:var(--leather-deep);line-height:1;}
-  .step h3{font-size:1.5rem;margin-top:10px;color:var(--ink);}
-  .step p{color:var(--muted);font-size:1rem;margin-top:10px;}
 
   /* CTA final */
   .final{background-image:var(--linen-tex),linear-gradient(180deg,var(--green),var(--green-deep));background-size:300px,auto;background-blend-mode:overlay,normal;color:#fff;text-align:center;}
@@ -343,9 +362,8 @@
   .gen-slogan .flag{width:.86em;height:.58em;vertical-align:.1em;}
   .gen-slogan{text-align:center;font-family:"EB Garamond",serif;font-weight:600;font-size:clamp(2rem,4.4vw,2.8rem);line-height:1.18;color:var(--cream);margin-top:64px;}
   @media(max-width:820px){
-    .hero-grid,.craft-grid,.zona-grid{grid-template-columns:1fr;gap:40px;}
+    .hero-grid,.zona-grid{grid-template-columns:1fr;gap:40px;}
     .hero-media{order:-1;}
-    .svc-grid{grid-template-columns:1fr;}
     .packs{grid-template-columns:1fr;gap:18px;}
     .pack{padding:26px 22px 24px;}
     .pack img{width:120px;height:120px;}
@@ -386,6 +404,9 @@
     .mark{gap:12px;}
     .mark img{width:56px;height:56px;}
     .mark .brand-name{font-size:1.35rem;}
+    .zona-deliver{gap:12px;padding:18px;}
+    .zona-deliver svg{width:42px;height:42px;}
+    .zona-stamp{width:64px;height:64px;}
   }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto;}}
   .rise{opacity:0;transform:translateY(12px);animation:rise .8s ease .05s forwards;}
@@ -491,7 +512,7 @@
 <header>
   <div class="wrap bar">
     <a class="mark" href="#">
-      <img src="assets/brand/seal-cream.png" alt="" width="192" height="192">
+      <img src="assets/brand/seal-cream.png" alt="" width="256" height="256">
       <span class="brand-name">Puntada Firme</span>
     </a>
     <a class="btn btn-primary" href="https://wa.me/59899485236?text=Hola%20Zulari!%20Vi%20tu%20p%C3%A1gina%20y%20quer%C3%ADa%20consultar%20por%20una%20prenda." target="_blank" rel="noopener">
@@ -507,7 +528,7 @@
     <div class="rise">
       <span class="label">Costura VENEZOLANA · CIUDAD DE LA COSTA</span>
       <h1>Que cada prenda te quede <em>como fue pensada.</em></h1>
-      <p class="lead">Arreglos, ajustes y la ropa de todos los días, con décadas de oficio.</p>
+      <p class="lead">Arreglos y ajustes de ropa en Solymar, Ciudad de la Costa, con décadas de oficio.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="https://wa.me/59899485236?text=Hola%20Zulari!%20Vi%20tu%20p%C3%A1gina%20y%20quer%C3%ADa%20consultar%20por%20una%20prenda." target="_blank" rel="noopener">
           <svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path class="g" d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.5-6c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.3 7.3 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.4a.5.5 0 0 0 0-.5c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c.6.3 1.1.4 1.5.5a3.5 3.5 0 0 0 1.6.1c.5-.1 1.4-.6 1.6-1.1s.2-1 .1-1.1-.2-.2-.5-.3z"/></svg>
@@ -583,8 +604,8 @@
     <div class="packs">
       <article class="pack">
         <span class="pack-save">Ahorrás $100</span>
-        <img src="assets/pack-wardrobe.jpg" alt="Remeras colgadas en perchas de madera" width="440" height="440" loading="lazy">
-        <h3>Pack 2 dobladillos</h3>
+        <img src="assets/pack-jeans.jpg" alt="Pantalones de jean doblados" width="440" height="440" loading="lazy">
+        <h3>Pack 2 ruedos</h3>
         <p>Dos pantalones, un solo viaje.</p>
         <span class="pack-price">$600</span>
       </article>
@@ -598,7 +619,7 @@
       </article>
       <article class="pack">
         <span class="pack-save">Ahorrás $200</span>
-        <img src="assets/pack-party.jpg" alt="Detalle de un vestido de fiesta con perlas" width="440" height="440" loading="lazy">
+        <img src="assets/pack-dress.jpg" alt="Vestidos colgados en un perchero del taller" width="440" height="440" loading="lazy">
         <h3>Pack vestido listo</h3>
         <p>Dobladillo y entalle en la misma prenda.</p>
         <span class="pack-price">$1.100</span>
@@ -612,7 +633,7 @@
           <h3>Pantalones y jeans</h3>
         </div>
         <ul class="rate-list">
-          <li><span>Dobladillo de pantalón</span><span class="rate-dots"></span><span class="rate-price">$350</span></li>
+          <li><span>Ruedo de pantalón</span><span class="rate-dots"></span><span class="rate-price">$350</span></li>
           <li><span>Dobladillo de jean con remate</span><span class="rate-dots"></span><span class="rate-price">$600</span></li>
           <li><span>Estrechar cintura</span><span class="rate-dots"></span><span class="rate-price">$600</span></li>
           <li><span>Cambiar cierre</span><span class="rate-dots"></span><span class="rate-price">$600</span></li>
@@ -636,7 +657,7 @@
           <h3>Polleras y vestidos</h3>
         </div>
         <ul class="rate-list">
-          <li><span>Dobladillo de pollera</span><span class="rate-dots"></span><span class="rate-price">$450</span></li>
+          <li><span>Ruedo de pollera</span><span class="rate-dots"></span><span class="rate-price">$450</span></li>
           <li><span>Estrechar falda</span><span class="rate-dots"></span><span class="rate-price">$600</span></li>
           <li><span>Cambiar cierre</span><span class="rate-dots"></span><span class="rate-price">$600</span></li>
         </ul>
@@ -644,11 +665,11 @@
       <article class="rate-card">
         <div class="rate-head">
           <svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 5 6l1.6 3.6L9 8.4"/><path d="M15 4l4 2-1.6 3.6L15 8.4"/><path d="M9 4l3 2.3L15 4"/><path d="M9 8.4V20.5h6V8.4"/></svg>
-          <h3>Uniformes</h3>
+          <h3>Túnicas y uniformes</h3>
         </div>
         <ul class="rate-list">
-          <li><span>Dobladillo escolar</span><span class="rate-dots"></span><span class="rate-price">$300</span></li>
-          <li><span>Ajuste de talle</span><span class="rate-dots"></span><span class="rate-price">$500</span></li>
+          <li><span>Ruedo de túnica</span><span class="rate-dots"></span><span class="rate-price">$300</span></li>
+          <li><span>Achicar túnica</span><span class="rate-dots"></span><span class="rate-price">$500</span></li>
           <li><span>De trabajo o militar</span><span class="rate-dots"></span><span class="rate-price">$700</span></li>
         </ul>
       </article>
@@ -676,7 +697,10 @@
         </ul>
       </article>
     </div>
-    <p class="rate-note">Precios orientativos en pesos. El final se confirma al ver la prenda.</p>
+    <div class="rate-promise">
+      <p>Si no te queda perfecta, vuelve. <em>El primer arreglo es gratis.</em></p>
+      <p class="rate-note">Dentro de los 15 días y sobre el mismo arreglo.</p>
+    </div>
     <div class="rate-cta">
       <a class="btn btn-primary" href="https://wa.me/59899485236?text=Hola%20Zulari!%20Vi%20las%20tarifas%20y%20quer%C3%ADa%20consultar%20por%20una%20prenda." target="_blank" rel="noopener">
         <svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path class="g" d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.5-6c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.3 7.3 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.4a.5.5 0 0 0 0-.5c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c.6.3 1.1.4 1.5.5a3.5 3.5 0 0 0 1.6.1c.5-.1 1.4-.6 1.6-1.1s.2-1 .1-1.1-.2-.2-.5-.3z"/></svg>
@@ -704,7 +728,8 @@
       <p class="cap">Si estás un poco más lejos, consúltame de todas formas.</p>
       <div class="zona-deliver">
         <svg aria-hidden="true"><use href="#delivery-bag"/></svg>
-        <p>Cada prenda vuelve <strong>protegida y sellada</strong>, con el cuidado de Puntada Firme.</p>
+        <p>Cada prenda vuelve <strong>protegida y sellada</strong>, con el cuidado de Puntada Firme</p>
+        <img class="zona-stamp" src="assets/brand/stamp-seal.png" alt="Sello de Puntada Firme" width="258" height="258" loading="lazy">
       </div>
     </div>
     <div class="map" aria-label="Zona de cobertura en Ciudad de la Costa">
@@ -830,7 +855,7 @@
   <div class="wrap">
     <div class="foot">
       <div class="foot-brand">
-        <img src="assets/brand/seal-cream.png" alt="" width="192" height="192" loading="lazy">
+        <img src="assets/brand/seal-cream.png" alt="" width="256" height="256" loading="lazy">
         <div>
           <div class="brand-name">Puntada Firme</div>
           <div class="sub">COSTURA VENEZOLANA · SOLYMAR</div>
