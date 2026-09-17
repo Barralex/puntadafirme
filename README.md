@@ -33,4 +33,4 @@ Every push to `main` runs `check.py` first: broken markup, a missing file, or a 
 
 Commits follow `type(scope): short message`, e.g. `feat(landing): add reviews`, `fix(deploy): ...`, `docs(readme): ...`.
 
-<p align="center"><sub>co-assisted by <b>Claude Opus 5</b></sub></p>
+<p align="center"><sub>co-assisted by <b>Claude Opus 4.8</b></sub></p>
