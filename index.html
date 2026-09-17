@@ -94,6 +94,7 @@
     --leather:#AC733F;
     --leather-deep:#8A5A2B;
     --gold:#D4A95C;
+    --thread:#A64B3F;
     --wa:#25D366;
     --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
     --linen-tex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='u'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.012' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23u)' opacity='0.55'/%3E%3Crect width='100%25' height='100%25' filter='url(%23t)' opacity='0.45'/%3E%3C/svg%3E");
@@ -136,7 +137,7 @@
   .bar .btn:focus-visible{outline-color:var(--cream);}
 
   /* Hero */
-  .hero{padding:72px 0 40px;}
+  .hero{padding:72px 0 40px;overflow-x:clip;}
   .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center;}
   .hero .label{display:inline-flex;align-items:center;margin-bottom:26px;}
   .hero h1{font-size:clamp(2.9rem,6vw,4.7rem);letter-spacing:-.01em;}
@@ -145,10 +146,20 @@
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
   .hero-note{margin-top:30px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.5rem;color:var(--ink);}
 
+  .hero-frame{position:relative;}
+  .hero-thread{position:absolute;right:-44px;bottom:-72px;width:210px;height:158px;color:var(--thread);fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;pointer-events:none;}
   .hero-media{position:relative;aspect-ratio:5/4;border-radius:22px;overflow:hidden;background:var(--linen);box-shadow:0 30px 60px -34px rgba(120,80,40,.4);}
-  .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease;}
+  .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;cursor:pointer;transition:opacity 1s ease;}
   .hero-media img.is-active{opacity:1;}
-  .hero-dots{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:8px;padding:7px 10px;border-radius:999px;background:rgba(252,250,244,.9);box-shadow:0 4px 14px -6px rgba(120,80,40,.35);}
+  .hero-dots{position:absolute;right:16px;bottom:16px;display:flex;gap:8px;padding:7px 10px;border-radius:999px;background:rgba(252,250,244,.9);box-shadow:0 4px 14px -6px rgba(120,80,40,.35);}
+  .hero-cat{position:absolute;left:16px;bottom:12px;padding:6px 13px;border-radius:999px;background:rgba(252,250,244,.9);box-shadow:0 4px 14px -6px rgba(120,80,40,.35);font-size:.8rem;font-weight:600;color:var(--green);text-decoration:none;}
+  .hero-cat:hover{background:var(--cream);}
+  .hero-cat:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .lit{position:relative;}
+  .lit::after{content:"";position:absolute;inset:-4px -12px;border:1.5px dashed var(--thread);border-radius:12px;pointer-events:none;animation:sew 3s ease .6s both;}
+  .lit-critter{position:absolute;right:-18px;top:-20px;width:24px;height:24px;pointer-events:none;animation:land 3s ease .6s both;}
+  @keyframes sew{0%{clip-path:inset(0 100% 0 0);}30%,80%{clip-path:inset(0);opacity:1;}100%{clip-path:inset(0);opacity:0;}}
+  @keyframes land{0%{transform:translate(30px,-24px) rotate(25deg);opacity:0;}25%,55%,80%{transform:none;opacity:1;}40%{transform:translateY(-3px) rotate(-6deg);}100%{transform:translate(-28px,-32px) rotate(-20deg);opacity:0;}}
   .hero-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(18,58,43,.28);cursor:pointer;transition:width .3s ease,background .3s ease;}
   .hero-dots button[aria-current="true"]{width:22px;background:var(--green);}
   .hero-dots button:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
@@ -174,7 +185,7 @@
   .rate-sub{margin-top:52px;text-align:center;font-family:"EB Garamond",serif;font-weight:600;font-size:1.5rem;color:var(--green);}
   .rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px;}
   .pack-was{margin-top:4px;font-size:.82rem;color:var(--muted);text-decoration:line-through;}
-  .rate-card{position:relative;border:1px solid var(--line);border-radius:14px;padding:26px 26px 22px;background:#fff;box-shadow:0 18px 34px -30px rgba(120,80,40,.5);}
+  .rate-card{position:relative;scroll-margin-top:100px;border:1px solid var(--line);border-radius:14px;padding:26px 26px 22px;background:#fff;box-shadow:0 18px 34px -30px rgba(120,80,40,.5);}
   @media(max-width:1040px){.rate-grid{grid-template-columns:1fr 1fr;}}
   .rate-card::before,.rate-card::after{content:"";position:absolute;width:26px;height:26px;border:1.5px solid rgba(172,115,63,.45);}
   .rate-card::before{top:-1px;right:-1px;border-left:0;border-bottom:0;border-radius:0 14px 0 0;}
@@ -373,7 +384,9 @@
   .gen-slogan{text-align:center;font-family:"EB Garamond",serif;font-weight:600;font-size:clamp(2rem,4.4vw,2.8rem);line-height:1.18;color:var(--cream);margin-top:64px;}
   @media(max-width:820px){
     .hero-grid,.zona-grid{grid-template-columns:1fr;gap:40px;}
-    .hero-media{order:-1;}
+    .hero-frame{order:-1;}
+    .hero-cat{top:12px;bottom:auto;}
+    .hero-thread{right:-27px;bottom:-44px;width:130px;height:98px;}
     .packs{grid-template-columns:1fr;gap:18px;}
     .pack{padding:26px 22px 24px;}
     .pack img{width:120px;height:120px;}
@@ -553,10 +566,18 @@
       <p class="hero-note">Décadas de oficio, hecho a mano, cerca de ti.</p>
     </div>
 
-    <div class="hero-media rise">
-      <img class="is-active" src="assets/hero-hands.webp" alt="Manos cosiendo una prenda en la máquina" width="1024" height="574" style="object-position:20% 50%">
-      <img src="assets/hero-threads.webp" alt="Carreteles de hilo, centímetro y tijera sobre la mesa de trabajo" width="1024" height="576">
-      <img src="assets/hero-presser-foot.webp" alt="Prensatelas de la máquina cosiendo una tela" width="1024" height="733">
+    <div class="hero-frame rise">
+      <svg class="hero-thread" viewBox="0 0 160 120" aria-hidden="true"><defs><path id="lf" d="M0 0c5-7 14-9 19-7-2 6-11 10-19 7z"/></defs><path d="M104 8c18 30 30 54 6 72S58 96 30 100" stroke-dasharray="3.2 2.2"/><g stroke-width=".8" stroke-dasharray="2.4 1.8"><use href="#lf" transform="translate(123 57) rotate(54)"/><use href="#lf" transform="translate(118 72) rotate(164) scale(.95 -.95)"/><use href="#lf" transform="translate(101 86) rotate(113) scale(.9)"/><use href="#lf" transform="translate(84 92) rotate(202) scale(.8 -.8)"/><use href="#lf" transform="translate(67 96) rotate(134) scale(.7)"/><use href="#lf" transform="translate(52 98) rotate(213) scale(.6 -.6)"/></g><path d="M30 100c-8 1-13 8-8 11s9-4 3-7-11 1-14 5" stroke-width=".7"/><circle cx="11" cy="109" r="1.1" fill="currentColor" stroke="none"/></svg>
+      <div class="hero-media">
+        <img class="is-active" src="assets/hero-hands-fleece.webp" alt="Manos de una modista mayor cosiendo un buzo polar en la máquina" width="1000" height="800" data-c="Camisas y abrigos" data-h="camisas">
+        <img src="assets/hero-mended-jeans.webp" alt="Jean claro con un agujero zurcido" width="1000" height="800" data-c="Pantalones y jeans" data-h="pantalones">
+        <img src="assets/hero-floral-skirt.webp" alt="Tela floreada con puntilla pasando por una máquina antigua" width="1000" height="800" data-c="Polleras y vestidos" data-h="polleras">
+        <img src="assets/hero-white-tunic.webp" alt="Manos cosiendo a mano el borde de una prenda blanca" width="1000" height="800" data-c="Túnicas escolares" data-h="uniformes">
+        <img src="assets/hero-work-uniforms.webp" alt="Ambo verde de enfermería y equipos de bomberos colgados en el cuartel" width="1000" height="800" data-c="Trabajo y servicio" data-h="uniforme-trabajo">
+        <img src="assets/hero-police-military.webp" alt="Camisa de uniforme policial con radio y botas militares en formación" width="1000" height="800" data-c="Policiales y militares" data-h="uniforme-trabajo">
+        <img src="assets/hero-baby-clothes.webp" alt="Una madre mirando si la ropa del bebé todavía le entra" width="1000" height="800" data-c="Ropa de bebé" data-h="bebe">
+        <img src="assets/hero-party-dress.webp" alt="Modista tomando la medida de cintura de un vestido" width="1000" height="800" data-c="Ropa de fiesta" data-h="fiesta">
+      </div>
     </div>
   </div>
 </section>
@@ -641,7 +662,7 @@
     </div>
     <p class="rate-sub">Tarifas independientes</p>
     <div class="rate-grid">
-      <article class="rate-card">
+      <article class="rate-card" id="pantalones">
         <div class="rate-head">
           <svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 3h8.8l.7 8.8.6 9.2h-4.3L12 12.4 10.6 21H6.3l.6-9.2z"/><path d="M7.4 6.2h9.2"/></svg>
           <h3>Pantalones y jeans</h3>
@@ -653,7 +674,7 @@
           <li><span>Cambiar cierre</span><span class="rate-dots"></span><span class="rate-price">$600</span></li>
         </ul>
       </article>
-      <article class="rate-card">
+      <article class="rate-card" id="camisas">
         <div class="rate-head">
           <svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.3a1.7 1.7 0 10-1.5 2.5c.5.3.8.8.8 1.4"/><path d="M11.3 8.6 3.6 14a1.1 1.1 0 00.65 2h15.5a1.1 1.1 0 00.65-2L12.7 8.6a1 1 0 00-1.4 0z"/></svg>
           <h3>Camisas y abrigos</h3>
@@ -665,7 +686,7 @@
           <li><span>Parches y zurcidos</span><span class="rate-dots"></span><span class="rate-price">$350</span></li>
         </ul>
       </article>
-      <article class="rate-card">
+      <article class="rate-card" id="polleras">
         <div class="rate-head">
           <svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.6h6l3.4 15.2a1 1 0 01-1 1.2H6.6a1 1 0 01-1-1.2z"/><path d="M8.7 7h6.6"/></svg>
           <h3>Polleras y vestidos</h3>
@@ -676,7 +697,7 @@
           <li><span>Cambiar cierre</span><span class="rate-dots"></span><span class="rate-price">$600</span></li>
         </ul>
       </article>
-      <article class="rate-card">
+      <article class="rate-card" id="uniformes">
         <div class="rate-head">
           <svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 5 6l1.6 3.6L9 8.4"/><path d="M15 4l4 2-1.6 3.6L15 8.4"/><path d="M9 4l3 2.3L15 4"/><path d="M9 8.4V20.5h6V8.4"/></svg>
           <h3>Túnicas y uniformes</h3>
@@ -684,10 +705,10 @@
         <ul class="rate-list">
           <li><span>Ruedo de túnica</span><span class="rate-dots"></span><span class="rate-price">$300</span></li>
           <li><span>Achicar túnica</span><span class="rate-dots"></span><span class="rate-price">$500</span></li>
-          <li><span>De trabajo o militar</span><span class="rate-dots"></span><span class="rate-price">$700</span></li>
+          <li id="uniforme-trabajo"><span>De trabajo o militar</span><span class="rate-dots"></span><span class="rate-price">$700</span></li>
         </ul>
       </article>
-      <article class="rate-card">
+      <article class="rate-card" id="bebe">
         <div class="rate-head">
           <svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6l-.5 2.5 2.6 1-1.2 2.4-1.6-.7V14c0 3-1.4 5-3.3 5S7.7 17 7.7 14V9.2l-1.6.7L4.9 7.5l2.6-1L9 4z"/><path d="M10.3 18.2h3.4"/></svg>
           <h3>Ropa de bebé</h3>
@@ -698,7 +719,7 @@
           <li><span>Remiendos</span><span class="rate-dots"></span><span class="rate-price">$300</span></li>
         </ul>
       </article>
-      <article class="rate-card">
+      <article class="rate-card" id="fiesta">
         <div class="rate-head">
           <svg class="svc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3l2.5 2 2.5-2"/><path d="M9.5 3 8.7 6.6l3.3 2.1 3.3-2.1L14.5 3"/><path d="M8.7 6.6 5.6 20.4a.6.6 0 00.58.76h11.64a.6.6 0 00.58-.76L15.3 6.6"/></svg>
           <h3>Ropa de fiesta</h3>
@@ -923,17 +944,37 @@
     nav.appendChild(dot);
     dots.push(dot);
   }
-  dots[0].setAttribute('aria-current','true');
+  var cat=document.createElement('a'), critter=Math.floor(Math.random()*3);
+  cat.className='hero-cat';
+  function go(e){
+    var t=document.getElementById(slides[current].dataset.h);
+    if(!t) return;
+    e.preventDefault();
+    t.scrollIntoView({behavior:'smooth',block:'center'});
+    setTimeout(function(){ t.scrollIntoView({behavior:'smooth',block:'center'}); },900);
+    var z=t.querySelector('.rate-head')||t;
+    if(reduce||z.classList.contains('lit')) return;
+    z.classList.add('lit');
+    critter=(critter+1+Math.floor(Math.random()*2))%3;
+    z.insertAdjacentHTML('beforeend','<svg class="lit-critter" aria-hidden="true"><use href="#'+['bee','ladybug','butterfly'][critter]+'"/></svg>');
+    setTimeout(function(){ z.classList.remove('lit'); z.removeChild(z.lastChild); },3700);
+  }
+  cat.addEventListener('click',go);
+  media.addEventListener('click',function(e){ if(e.target.tagName==='IMG') go(e); });
+  media.appendChild(cat);
   media.appendChild(nav);
+  show(0);
   function show(i){
     slides[current].classList.remove('is-active');
     dots[current].removeAttribute('aria-current');
     current=(i+slides.length)%slides.length;
     slides[current].classList.add('is-active');
     dots[current].setAttribute('aria-current','true');
+    cat.textContent=slides[current].dataset.c+' →';
+    cat.href='#'+slides[current].dataset.h;
   }
   function stop(){ clearInterval(timer); }
-  function play(){ stop(); if(!reduce) timer=setInterval(function(){ show(current+1); },5000); }
+  function play(){ stop(); if(!reduce) timer=setInterval(function(){ show(current+1); },4050); }
   media.addEventListener('mouseenter',stop);
   media.addEventListener('mouseleave',play);
   play();

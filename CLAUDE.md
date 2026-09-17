@@ -14,7 +14,7 @@ One static page. No build step, no dependencies, nothing to install: `index.html
 python .github/scripts/check.py
 ```
 
-It also runs on every push to `main` and stops the deploy on failure. It checks the 60 KB budget for `index.html`, balanced markup, that every referenced file exists, that no image was pasted in as base64, and that the social tags are absolute and on the right domain. **The budget is nearly spent** (~59 KB): delete dead CSS before adding anything.
+It also runs on every push to `main` and stops the deploy on failure. It checks the 64 KB budget for `index.html`, balanced markup, that every referenced file exists, that no image was pasted in as base64, and that the social tags are absolute and on the right domain. **The budget is tight** (~62 KB): delete dead CSS before adding anything.
 
 ## Page rules
 
@@ -36,6 +36,7 @@ Tokens in `:root`, sampled from the logo. Ratios are measured against cream, the
 | `--leather` | `#AC733F` | Accents, display type | 3.4:1 — large only |
 | `--leather-deep` | `#8A5A2B` | Small type, labels | 5.2:1 |
 | `--gold` | `#D4A95C` | Accent on dark surfaces | 1.9:1 — never here |
+| `--thread` | `#A64B3F` | Embroidered sprig and stitched price highlight | Decoration only, never text |
 
 Type: Cormorant Garamond sets the headings, EB Garamond the gallery and steps, Inter the body copy, Source Serif 4 Bold only the wordmark.
 

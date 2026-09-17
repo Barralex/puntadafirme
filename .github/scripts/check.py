@@ -11,7 +11,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlparse
 
 PAGE = "index.html"
-MAX_PAGE_BYTES = 60 * 1024
+MAX_PAGE_BYTES = 64 * 1024
 
 VOID = {
     "area", "base", "br", "col", "embed", "hr", "img", "input",
