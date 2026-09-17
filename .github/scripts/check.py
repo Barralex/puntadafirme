@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pre-deploy checks for the atelier page.
+"""Pre-deploy checks for the Puntada Firme page.
 
 Runs before anything reaches GitHub Pages. A failure here leaves the
 published site untouched instead of replacing it with a broken one.

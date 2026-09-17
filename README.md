@@ -2,7 +2,7 @@
 
 **Venezuelan tailoring · Solymar, Ciudad de la Costa, Uruguay**
 
-Landing page for a seamstress's atelier: alterations, uniforms, children's clothing, and the party dress that needs one last fix. Cloth, thread, and patience.
+Puntada Firme is a sewing house in Solymar: alterations, uniforms, children's clothing, and the party dress that needs one last fix. Cloth, thread, and patience. This repository is the brand's home on the web — one page, one domain, one way to reach it.
 
 ***
 
@@ -21,7 +21,7 @@ assets/                        images
 
 The hero photos (`hero-*.webp`) are CC0 from [rawpixel](https://www.rawpixel.com): free for commercial use, no attribution required. The current machine (`machine-heavy-duty.jpg`) is by [storebukkebruse](https://www.flickr.com/photos/8536261@N07/13937583028) under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/), credited in the footer.
 
-Published at `https://puntadafirme.com/`. The social preview tags and `CNAME` both carry that domain; change them together if it ever moves.
+Published at `https://puntadafirme.com/`. The name is the domain is the brand: the social preview tags, the `CNAME`, the JSON-LD and the seal all carry it, and they move together or not at all.
 
 To update, edit `index.html` and:
 

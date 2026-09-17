@@ -1,6 +1,6 @@
 # Puntada Firme
 
-One-page landing for **Puntada Firme**, a Venezuelan-rooted sewing business in Solymar, Ciudad de la Costa. The page has a single job: get the visitor to tap the WhatsApp button.
+One-page landing for **Puntada Firme**, a Venezuelan-rooted sewing brand in Solymar, Ciudad de la Costa. The page has a single job: get the visitor to tap the WhatsApp button.
 
 Published at `https://puntadafirme.com/` through GitHub Pages.
 
