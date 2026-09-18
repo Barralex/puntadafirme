@@ -1,6 +1,7 @@
 <div align="center">
 
 <img src="assets/brand/banner.png" width="100%" alt="Puntada Firme">
+<br><br>
 
 [![Live](https://img.shields.io/badge/live-puntadafirme.com-123A2B?style=flat-square)](https://puntadafirme.com/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-deployed-AC733F?style=flat-square&logo=github&logoColor=white)](https://puntadafirme.com/)
