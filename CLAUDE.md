@@ -48,7 +48,7 @@ The seal in `assets/brand/` is original vector work: a leather rope, a laurel wr
 
 ## Data kept in more than one place
 
-The opening hours (Mon–Fri 15–19, Sat 9–15) sit in two spots that must always agree: the footer and `openingHoursSpecification` in the JSON-LD. The phone number sits in five: the four WhatsApp buttons, `telephone` in the schema, and the footer text. Change one, change them all — a mismatch between the page and the Google Business Profile cancels out the local SEO signal it was meant to send.
+The opening hours (Mon–Fri 15–19, Sat 10–15) sit in two spots that must always agree: the footer and `openingHoursSpecification` in the JSON-LD. The phone number sits in five: the four WhatsApp buttons, `telephone` in the schema, and the footer text. Change one, change them all — a mismatch between the page and the Google Business Profile cancels out the local SEO signal it was meant to send.
 
 ## Legal
 
