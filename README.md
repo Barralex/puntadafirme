@@ -2,7 +2,7 @@
 
 **Venezuelan tailoring · Solymar, Ciudad de la Costa, Uruguay**
 
-Puntada Firme is a sewing house in Solymar: alterations, uniforms, children's clothing, and the party dress that needs one last fix. Cloth, thread, and patience. This repository is the brand's home on the web — one page, one domain, one way to reach it.
+A sewing house in Solymar: alterations, uniforms, children's clothing, and the party dress that needs one last fix before Saturday. Cloth, thread, and patience. This repository is the brand's home on the web: one page, one domain, one way to reach it.
 
 ***
 
@@ -10,27 +10,10 @@ The roots of this workshop run three countries deep, and the vision arrived comp
 
 ***
 
-A single static page: no build step, no dependencies, nothing to install. HTML, three typefaces, and [Leaflet](https://leafletjs.com) for the coverage map over Ciudad de la Costa. The icons, the flag, and the 24-48 h seal are inline SVG, so they stay sharp at any size and cost no extra request.
+One static page. HTML, three typefaces, and [Leaflet](https://leafletjs.com) for the coverage map over Ciudad de la Costa; no build step, no dependencies, nothing to install. Every push to `main` is checked before it ships, and a check that fails leaves the live site exactly as it was.
 
-```
-index.html                     the page
-assets/                        images
-.github/scripts/check.py       checks the page before it goes out
-.github/workflows/deploy.yml   publishes to GitHub Pages
-```
+Published at [puntadafirme.com](https://puntadafirme.com/) on GitHub Pages. The name is the domain is the brand, and the social tags, the `CNAME`, the JSON-LD and the seal move together or not at all.
 
-The hero photos (`hero-*.webp`) are CC0 from [rawpixel](https://www.rawpixel.com): free for commercial use, no attribution required. The current machine (`machine-heavy-duty.jpg`) is by [storebukkebruse](https://www.flickr.com/photos/8536261@N07/13937583028) under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/), credited in the footer.
+Conventions, image licences and open work: [CLAUDE.md](CLAUDE.md).
 
-Published at `https://puntadafirme.com/`. The name is the domain is the brand: the social preview tags, the `CNAME`, the JSON-LD and the seal all carry it, and they move together or not at all.
-
-To update, edit `index.html` and:
-
-```bash
-git add . && git commit -m "fix(landing): short description" && git push
-```
-
-Every push to `main` runs `check.py` first: broken markup, a missing file, or a bad social preview tag stops the deploy and the live site stays as it was.
-
-Commits follow `type(scope): short message`, e.g. `feat(landing): add reviews`, `fix(deploy): ...`, `docs(readme): ...`.
-
-<p align="center"><sub>co-assisted by <b>Claude Opus 4.8</b></sub></p>
+<p align="center"><sub>co-assisted by <b>Claude Opus 5</b></sub></p>
