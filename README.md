@@ -6,7 +6,7 @@
 [![Live](https://img.shields.io/badge/live-puntadafirme.com-123A2B?style=flat-square)](https://puntadafirme.com/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-deployed-AC733F?style=flat-square&logo=github&logoColor=white)](https://puntadafirme.com/)
 [![Build](https://img.shields.io/badge/build-none-6B6257?style=flat-square)](#requirements)
-[![License](https://img.shields.io/badge/license-MIT-8A5A2B?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/license-proprietary-8A5A2B?style=flat-square)](LICENSE)
 
 ### Cloth, thread, and patience.
 
@@ -39,13 +39,13 @@ Palette, conventions, image licences and open work: [CLAUDE.md](CLAUDE.md).
 
 ## License
 
-[MIT](LICENSE) &copy; [Luis Barral](https://barral.dev). Free to use and adapt, as long as the credit stays.
+&copy; 2026 [Luis Barral](https://barral.dev). All rights reserved. The code is public to read, not to reuse: copying or adapting it needs written permission. See [LICENSE](LICENSE).
 
 The brand, the copy and the photography belong to the client and are not covered by it.
 
 <div align="center">
 
-**[Luis Barral](https://barral.dev)** &middot; MIT License
+**[Luis Barral](https://barral.dev)** &middot; All rights reserved
 
 <sub>co-assisted by <b>Claude Opus 5</b></sub>
 
